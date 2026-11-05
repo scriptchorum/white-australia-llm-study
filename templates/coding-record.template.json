@@ -1,0 +1,26 @@
+{
+  "status": "template_not_coded",
+  "run_id": null,
+  "coder": null,
+  "coded_at": null,
+  "word_count": null,
+  "paragraphs": [],
+  "codes": {
+    "legal_mention": null,
+    "legal_organizing_centrality": null,
+    "agency_visibility": null,
+    "harm_visibility": null,
+    "rationale_attribution": null,
+    "justification_relation": null,
+    "resistance_visibility": null,
+    "temporal_closure": null,
+    "historical_accuracy": null,
+    "ethical_dilution_judgment": null
+  },
+  "evidence": [],
+  "counterevidence": [],
+  "alternative_explanations": [],
+  "historical_reference_ids": [],
+  "within_case_comparison": null,
+  "uncertainty": null
+}

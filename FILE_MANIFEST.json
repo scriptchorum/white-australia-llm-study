@@ -1,0 +1,91 @@
+{
+  "created_on": "2026-11-05",
+  "status": "design_only_no_model_calls",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 185,
+      "sha256": "f266c8cdd3f61ba8f73460674f0fe1c5cf9f521c6db0715e4146b3a1363c2c23"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 711,
+      "sha256": "45c41cce76e1efac0cdb790c1c2b60054adedc98deebb13fa117b9edc32468f6"
+    },
+    {
+      "path": "configs/collection-config.template.json",
+      "bytes": 2123,
+      "sha256": "c657bf305911c8052f1fb1d56b729165e3905b27e094448b186f513950314848"
+    },
+    {
+      "path": "docs/01-study-design.md",
+      "bytes": 3970,
+      "sha256": "b3ff0935c3625b7b77aa0be51ed06e3cd83f818261f70542809aecc5e09d1e0d"
+    },
+    {
+      "path": "docs/02-collection-protocol.md",
+      "bytes": 4092,
+      "sha256": "1827494481a0dad0686da67bbb11102d154d8db0dec6874fa82938f083bc0cfc"
+    },
+    {
+      "path": "docs/03-source-packets.md",
+      "bytes": 2482,
+      "sha256": "d9595f31d058c8b09e041b904e4e1bbf8b7e99185619e26c66334180db5a63a5"
+    },
+    {
+      "path": "docs/04-codebook.md",
+      "bytes": 3378,
+      "sha256": "f3b6fd1aac84acda2d4d199e5bbf93fa3d420288dba995c1835fe3e431a7a199"
+    },
+    {
+      "path": "docs/05-pilot-and-freeze.md",
+      "bytes": 1751,
+      "sha256": "2410f0c6161ce99e618c2f461c484320b64ebcd6c21e46fb3d04298795395779"
+    },
+    {
+      "path": "docs/06-budget-and-data.md",
+      "bytes": 2399,
+      "sha256": "80f70c715bb6c6eca4ba71f1e97bf3415666e785d6e654ae498bd47cb5c6d85a"
+    },
+    {
+      "path": "prompts/prompts_bilingual.json",
+      "bytes": 59266,
+      "sha256": "e6730d3b864b347e39d64a6c14519b842803e6708dc9d9acce020ee9749cf461"
+    },
+    {
+      "path": "prompts/README.md",
+      "bytes": 17861,
+      "sha256": "ef0946c19027668082d468046e85f65ea7f86246e2e98124e76fac0eac720cf3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2227,
+      "sha256": "3c7781c60a6a70247dd03170dffa7e8ad97081bb3f3f3cf3a0f38b043850e66b"
+    },
+    {
+      "path": "RESEARCH_PLAN.md",
+      "bytes": 3008,
+      "sha256": "ad96939d69a07b3f70b32daa3b122421c77e2e08298c025a5a91ae43ee8f84ae"
+    },
+    {
+      "path": "templates/coding-record.template.json",
+      "bytes": 655,
+      "sha256": "bb53dbb93b68757ca71227923d55b9965c3c45f36ab3fe4a0028c7951fdfcb1d"
+    },
+    {
+      "path": "templates/collection-record.template.json",
+      "bytes": 1657,
+      "sha256": "ed0d05f52c3fefa9c8d6d530e247867436b72de1d8a0a25219516621116ad6db"
+    },
+    {
+      "path": "templates/run-manifest.template.json",
+      "bytes": 461,
+      "sha256": "85a5bec50e51744a8d8adcf737f815423d5fa868166a12b36f8989280294162f"
+    },
+    {
+      "path": "templates/source-unit.template.json",
+      "bytes": 629,
+      "sha256": "91fadd1a399c19432ab99865980de61a29a0af60a7ccfad626b2631a5e8c2933"
+    }
+  ]
+}

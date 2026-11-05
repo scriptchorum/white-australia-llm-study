@@ -1,0 +1,13 @@
+{
+  "status": "template_not_scheduled",
+  "batch": null,
+  "protocol_version": null,
+  "prompt_file_sha256": null,
+  "source_version": null,
+  "configuration_version": null,
+  "randomization_method": null,
+  "randomization_seed_if_used": null,
+  "rows": [],
+  "row_fields": ["sequence", "run_id", "provider", "language", "prompt_id", "material_version", "material_order"],
+  "note": "This is an empty schema illustration, not a generated execution schedule."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "not_frozen_not_run",
+  "protocol_version": "0.1",
+  "prompt_version": "2026-11-05-v1-review-draft",
+  "source_packet_version": null,
+  "codebook_version": "0.1",
+  "batch": null,
+  "timezone": "Asia/Shanghai",
+  "models": [
+    {
+      "provider": "OpenAI",
+      "model_requested": null,
+      "model_reported": null,
+      "endpoint": null,
+      "access_verified": false,
+      "mode": null,
+      "system_or_developer_messages": [],
+      "previous_response_id_used": false,
+      "conversation_state_used": false,
+      "temperature": {"value": null, "status": "to_verify"},
+      "top_p": {"value": null, "status": "to_verify"},
+      "reasoning_setting": {"value": null, "status": "to_verify"},
+      "max_output_tokens": {"value": null, "status": "to_verify"},
+      "tools": []
+    },
+    {
+      "provider": "DeepSeek",
+      "model_requested": null,
+      "model_reported": null,
+      "endpoint": null,
+      "access_verified": false,
+      "mode": null,
+      "system_or_developer_messages": [],
+      "messages_rebuilt_for_each_request": true,
+      "temperature": {"value": null, "status": "to_verify"},
+      "top_p": {"value": null, "status": "to_verify"},
+      "reasoning_setting": {"value": null, "status": "to_verify"},
+      "max_output_tokens": {"value": null, "status": "to_verify"},
+      "tools": []
+    }
+  ],
+  "execution": {
+    "new_context_for_each_request": true,
+    "no_cross_model_or_language_answers_in_input": true,
+    "no_research_hypothesis_or_codebook_in_input": true,
+    "allow_material_placeholders": false,
+    "max_additional_technical_attempts": 2,
+    "result_selection": "first_technically_valid_response",
+    "semantic_retry_allowed": false,
+    "randomization_manifest": null,
+    "formal_requests_planned": 120,
+    "pilot_requests_planned": 12,
+    "reserve_diagnostics_enabled": false,
+    "user_authorized_paid_execution": false
+  },
+  "budget": {
+    "planning_range_cny": [30, 50],
+    "proposed_client_stop_threshold_cny": 50,
+    "fx_assumption_cny_per_usd": null,
+    "prices_verified_at": null,
+    "provider_billing_limit_verified": false
+  }
+}

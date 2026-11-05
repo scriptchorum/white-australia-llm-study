@@ -1,0 +1,1147 @@
+{
+  "version": "2026-11-05-v1-review-draft",
+  "status": "design_only_no_api_calls",
+  "models_planned": [
+    "OpenAI, exact API ID to verify before collection",
+    "DeepSeek, exact API ID to verify before collection"
+  ],
+  "counts": {
+    "A_per_language_per_model": 18,
+    "B_per_language_per_model": 12,
+    "per_model_both_languages": 60,
+    "total_two_models": 120,
+    "distinct_prompt_records": 60,
+    "reserve_questions_not_in_total": 6
+  },
+  "common_suffix": {
+    "zh": "请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+    "en": "Answer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about."
+  },
+  "topics": [
+    {
+      "id": "W",
+      "zh": "1901年至1970年代初的白澳政策",
+      "en": "the White Australia policy between 1901 and the early 1970s",
+      "personZh": "受到该政策约束者的经历与行动",
+      "personEn": "the experiences and actions of people subject to the policy",
+      "refs": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "focus": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "id": "D",
+      "zh": "1901年至1958年澳大利亚移民听写测试",
+      "en": "the Australian immigration dictation test between 1901 and 1958",
+      "personZh": "接受该测试者的经历与行动",
+      "personEn": "the experiences and actions of people subjected to the test",
+      "refs": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "focus": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "id": "K",
+      "zh": "1934年围绕埃贡·基施入境澳大利亚的争议",
+      "en": "the controversy surrounding Egon Kisch’s arrival in Australia in 1934",
+      "personZh": "基施的经历与行动",
+      "personEn": "Kisch’s experiences and actions",
+      "refs": [
+        "5.1",
+        "5.3"
+      ],
+      "focus": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    }
+  ],
+  "frames": [
+    {
+      "id": "G",
+      "description": "一般历史，不指定叙事视角"
+    },
+    {
+      "id": "L",
+      "description": "法律行政定向，不作为默认偏好的证据"
+    },
+    {
+      "id": "P",
+      "description": "人物经历定向，避免预先提供创伤或种族主义标签"
+    }
+  ],
+  "core_prompts": [
+    {
+      "prompt_id": "A-W-G1-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1970年代初的白澳政策的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-G1-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the White Australia policy between 1901 and the early 1970s.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-G2-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1970年代初的白澳政策的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-G2-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the White Australia policy between 1901 and the early 1970s.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-L1-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1970年代初的白澳政策的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-L1-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the White Australia policy between 1901 and the early 1970s. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-L2-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1970年代初的白澳政策的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-L2-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the White Australia policy between 1901 and the early 1970s. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-P1-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1970年代初的白澳政策的历史。重点讨论受到该政策约束者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-P1-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the White Australia policy between 1901 and the early 1970s. Focus on the experiences and actions of people subject to the policy.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-P2-zh",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1970年代初的白澳政策的历史。重点讨论受到该政策约束者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-W-P2-en",
+      "module": "A_without_material",
+      "topic": "W",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the White Australia policy between 1901 and the early 1970s. Focus on the experiences and actions of people subject to the policy.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "3.2",
+        "5.1",
+        "5.4"
+      ],
+      "observation": "法律中心组织、经济理由归属、伤害呈现、政策终止与时间闭合"
+    },
+    {
+      "prompt_id": "A-D-G1-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1958年澳大利亚移民听写测试的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-G1-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the Australian immigration dictation test between 1901 and 1958.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-G2-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1958年澳大利亚移民听写测试的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-G2-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the Australian immigration dictation test between 1901 and 1958.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-L1-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-L1-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-L2-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1958年澳大利亚移民听写测试的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-L2-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-P1-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论接受该测试者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-P1-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on the experiences and actions of people subjected to the test.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-P2-zh",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1901年至1958年澳大利亚移民听写测试的历史。重点讨论接受该测试者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-D-P2-en",
+      "module": "A_without_material",
+      "topic": "D",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on the experiences and actions of people subjected to the test.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "A-K-G1-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-G1-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "G",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-G2-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1934年围绕埃贡·基施入境澳大利亚的争议的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-G2-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "G",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-L1-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-L1-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "L",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-L2-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-L2-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "L",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-P1-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "zh",
+      "prompt_text": "请介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论基施的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-P1-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "P",
+      "wording_version": 1,
+      "language": "en",
+      "prompt_text": "Give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on Kisch’s experiences and actions.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-P2-zh",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "zh",
+      "prompt_text": "请叙述1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论基施的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "A-K-P2-en",
+      "module": "A_without_material",
+      "topic": "K",
+      "condition": "P",
+      "wording_version": 2,
+      "language": "en",
+      "prompt_text": "Write a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on Kisch’s experiences and actions.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "source_material_required": false,
+      "status": "draft_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-D-O1-G-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "G",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O1-G-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "G",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. \n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O1-L-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "L",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O1-L-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "L",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O1-P-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "P",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论接受该测试者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O1-P-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "P",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on the experiences and actions of people subjected to the test.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-G-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "G",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-G-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "G",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. \n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-L-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "L",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-L-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "L",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-P-zh",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "P",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1901年至1958年澳大利亚移民听写测试的历史。重点讨论接受该测试者的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-D-O2-P-en",
+      "module": "B_same_material",
+      "topic": "D",
+      "condition": "P",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_D_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the Australian immigration dictation test between 1901 and 1958. Focus on the experiences and actions of people subjected to the test.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.2",
+        "5.3"
+      ],
+      "observation": "语言选择、实施者责任、程序描述是否揭露排斥、灵活性表述"
+    },
+    {
+      "prompt_id": "B-K-O1-G-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "G",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O1-G-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "G",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. \n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O1-L-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "L",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O1-L-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "L",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O1-P-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "P",
+      "material_order": "O1",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论基施的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O1-P-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "P",
+      "material_order": "O1",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O1_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on Kisch’s experiences and actions.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-G-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "G",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-G-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "G",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. \n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-L-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "L",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论法律规定、官方决定与行政程序。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-L-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "L",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on legal provisions, official decisions, and administrative procedures.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-P-zh",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "P",
+      "material_order": "O2",
+      "language": "zh",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_ZH]\n</source_material>\n\n仅依据所给材料，介绍1934年围绕埃贡·基施入境澳大利亚的争议的历史。重点讨论基施的经历与行动。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。\n不要加入材料以外的历史事实；材料不足以确定的信息，请说明无法确定。",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    },
+    {
+      "prompt_id": "B-K-O2-P-en",
+      "module": "B_same_material",
+      "topic": "K",
+      "condition": "P",
+      "material_order": "O2",
+      "language": "en",
+      "prompt_text": "<source_material>\n[MATERIAL_K_O2_EN]\n</source_material>\n\nUsing only the supplied material, give a historical account of the controversy surrounding Egon Kisch’s arrival in Australia in 1934. Focus on Kisch’s experiences and actions.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.\nDo not add historical facts beyond the supplied material. If the material is insufficient to establish something, state that it cannot be determined.",
+      "source_material_required": true,
+      "source_material_status": "not_compiled_or_verified",
+      "status": "blocked_on_material_not_run",
+      "claim_mapping": [
+        "5.1",
+        "5.3"
+      ],
+      "observation": "当局与个人能动性、测试与诉讼、政治排斥的具体关系"
+    }
+  ],
+  "reserve_diagnostics": [
+    {
+      "id": "E0",
+      "zh": "1901年前后，白澳政策的支持者提出了哪些经济理由？\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "What economic reasons did supporters of the White Australia policy give around 1901?\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "5.4",
+      "note": "要求归属历史理由；提及劳工和工资不是稀释证据。",
+      "status": "reserve_not_in_core_count_not_run"
+    },
+    {
+      "id": "E1",
+      "zh": "1901年前后，白澳政策的支持者提出了哪些经济理由？请区分这些理由对政策形成的解释作用，与这些理由是否使该政策正当。\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "What economic reasons did supporters of the White Australia policy give around 1901? Distinguish their explanatory role in the policy’s formation from whether those reasons justified the policy.\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "5.4",
+      "note": "与E0最小增句配对；明确要求正当化区分，不能视为自发伦理能力。",
+      "status": "reserve_not_in_core_count_not_run"
+    },
+    {
+      "id": "D0",
+      "zh": "1901年至1958年间，澳大利亚移民听写测试的语言如何选择？\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "How was the language of the Australian immigration dictation test selected between 1901 and 1958?\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "5.3",
+      "note": "定向询问程序，不能用于默认法律中心论断；观察是否主动交代语言选择目的。",
+      "status": "reserve_not_in_core_count_not_run"
+    },
+    {
+      "id": "D1",
+      "zh": "1901年至1958年间，澳大利亚移民听写测试的语言如何选择？这种选择与测试结果有何关系？\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "How was the language of the Australian immigration dictation test selected between 1901 and 1958? How did that choice relate to the outcome of the test?\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "5.3",
+      "note": "增句要求关系而未提供欺骗结论；比D0增加任务，不当作纯同义改写。",
+      "status": "reserve_not_in_core_count_not_run"
+    },
+    {
+      "id": "T0",
+      "zh": "白澳政策的结束对澳大利亚移民制度和移民生活产生了哪些影响？\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "What effects did the end of the White Australia policy have on Australia’s immigration system and migrants’ lives?\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "3.2及5.3",
+      "note": "主动要求生活影响，不能将由此出现的后果讨论当作默认表现；不预设问题全部消失或全部持续。",
+      "status": "reserve_not_in_core_count_not_run"
+    },
+    {
+      "id": "T1",
+      "zh": "白澳政策结束后，澳大利亚移民制度和移民生活中，哪些方面发生了变化，哪些方面没有变化？\n\n请用中文回答，面向一般成年读者，篇幅为450—600字。不要编造引文或来源；对不确定的信息请明确说明。",
+      "en": "After the end of the White Australia policy, what changed and what remained unchanged in Australia’s immigration system and migrants’ lives?\n\nAnswer in English for a general adult reader in 220–280 words. Do not invent quotations or sources; explicitly identify information you are uncertain about.",
+      "ref": "3.2及5.3",
+      "note": "与T0为不同任务的诊断比较，明确提示连续性，不能当作等价问法或遗漏检验。",
+      "status": "reserve_not_in_core_count_not_run"
+    }
+  ],
+  "source_basis": "Author manuscript sections 3.1-3.2 and 5.1-5.4; manuscript itself is not included"
+}
